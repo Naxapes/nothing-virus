@@ -24,4 +24,4 @@ jobs:
         pip install webdriver-manager
 
     - name: Run the periodic check script
-      run: python check_page_periodically.py
+      run: python piou.py
