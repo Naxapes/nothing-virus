@@ -1,4 +1,4 @@
-name: Keep Page Open
+name: Keep it
 
 on:
   schedule:
@@ -24,4 +24,4 @@ jobs:
         pip install webdriver-manager
 
     - name: Run the keep_page_open script
-      run: python keep_page_open.py
+      run: python piou.py
