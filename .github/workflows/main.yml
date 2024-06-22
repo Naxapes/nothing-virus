@@ -24,4 +24,4 @@ jobs:
         pip install webdriver-manager
 
     - name: Run the keep_page_open script
-      run: python poiu.py
+      run: python piou.py
