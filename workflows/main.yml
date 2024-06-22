@@ -1,0 +1,27 @@
+name: Keep Page Open
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs once every day at midnight
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  keep-page-open:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install selenium
+        pip install webdriver-manager
+
+    - name: Run the keep_page_open script
+      run: python keep_page_open.py
