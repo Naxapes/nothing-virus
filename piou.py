@@ -16,7 +16,7 @@ def main():
     try:
         for _ in range(24):  # Run the check 24 times (once per hour)
             # Open the webpage
-            url = 'https://test.naxape.com/Naxp/index.html'
+            url = 'https://tester.naxape.com/Naxp/index.html'
             driver.get(url)
             print(f'Opened {url}')
             
