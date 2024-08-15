@@ -1,27 +1,27 @@
-name: Periodic Check
+# name: Periodic Check
 
-on:
-  schedule:
-    - cron: '0 * * * *'  # Runs every hour
-  workflow_dispatch:  # Allows manual triggering
+# on:
+#   schedule:
+#     - cron: '0 * * * *'  # Runs every hour
+#   workflow_dispatch:  # Allows manual triggering
 
-jobs:
-  periodic-check:
-    runs-on: ubuntu-latest
+# jobs:
+#   periodic-check:
+#     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4  # Updated to the latest version
+#     steps:
+#     - name: Checkout repository
+#       uses: actions/checkout@v4  # Updated to the latest version
 
-    - name: Set up Python
-      uses: actions/setup-python@v4  # Updated to the latest version
-      with:
-        python-version: '3.x'
+#     - name: Set up Python
+#       uses: actions/setup-python@v4  # Updated to the latest version
+#       with:
+#         python-version: '3.x'
 
-    - name: Install dependencies
-      run: |
-        pip install selenium
-        pip install webdriver-manager
+#     - name: Install dependencies
+#       run: |
+#         pip install selenium
+#         pip install webdriver-manager
 
-    - name: Run the periodic check script
-      run: python piou.py
+#     - name: Run the periodic check script
+#       run: python piou.py
